@@ -1,0 +1,16 @@
+.FormList__mainTitle {
+	background-color: #5A61ED;
+	transform: rotate(180deg);
+	writing-mode: vertical-lr;
+	text-align: start;
+	min-width: 131.5px;
+	margin: 0;
+	padding: 22.5px 0 0 6.5px;
+
+	font-family: 'PTSansRegular';
+	color: #FFFFFF;
+	font-weight: 400;
+	font-size: 49px;
+	line-height: 63px;
+	letter-spacing: 0.5px;
+}

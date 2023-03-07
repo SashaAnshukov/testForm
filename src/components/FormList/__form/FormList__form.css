@@ -1,0 +1,6 @@
+.FormList__form {
+	background-color: #FFFFFF;
+	display: flex;
+  flex-direction: column;
+	margin: 39px 22px 33px 21px;
+}

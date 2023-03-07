@@ -1,0 +1,14 @@
+@import url('./vendor/fonts/fonts.css');
+@import url('./vendor/normalize.css');
+
+@import url('./components/App/App.css');
+@import url('./components/FormList/FormList.css');
+@import url('./components/FormList/__container/FormList__container.css');
+@import url('./components/FormList/__form/FormList__form.css');
+@import url('./components/FormList/__mainTitle/FormList__mainTitle.css');
+@import url('./components/FormList/__title/Formlist__title.css');
+@import url('./components/FormList/__description/Formlist__description.css');
+@import url('./components/FormList/__auth/FormList__auth.css');
+@import url('./components/FormList/__authInfo/Formlist__authInfo.css');
+@import url('./components/FormList/__authInfoLink/Formlist__authInfoLink.css');
+@import url('./components/FormList/__button/FormList__button.css');

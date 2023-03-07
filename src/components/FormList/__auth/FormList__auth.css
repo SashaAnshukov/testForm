@@ -1,0 +1,5 @@
+.FormList__auth {
+	display: flex;
+  flex-direction: row;
+	margin-top: 250px;
+}

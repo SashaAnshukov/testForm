@@ -1,0 +1,9 @@
+.Formlist__authInfoLink {
+	margin: 0;
+	align-self: center;
+
+	font-family: 'WorkSansMedium';
+	font-size: 13px;
+	line-height: 15px;
+	color: #5A61ED;
+}

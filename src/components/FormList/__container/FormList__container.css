@@ -1,0 +1,8 @@
+.FormList__container {
+	width: 665px;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	height: 481px;
+	display: flex;
+  flex-direction: row;
+}

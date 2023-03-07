@@ -1,0 +1,20 @@
+.FormList__button {
+    background: #5A61ED;
+    border: none;
+    box-sizing: border-box;
+    min-width: 154px;
+		height: 32px;
+    padding: 0;
+		cursor: pointer;
+    outline: none;
+    margin-left: 184px;
+		
+		font-family: 'PTSansRegular';
+		color: #ffffff;
+		font-size: 14px;
+		line-height: 18px;
+}
+
+.FormList__button:hover {
+    opacity: 0.85;
+}
