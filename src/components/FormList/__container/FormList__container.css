@@ -1,4 +1,7 @@
 .FormList__container {
+	background-image: url('../../../images/Shape.svg');
+	background-repeat: no-repeat;
+	background-position:calc(50% + 230px) 180%;
 	width: 665px;
 	margin: 0 auto;
 	background-color: #FFFFFF;
