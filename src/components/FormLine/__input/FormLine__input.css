@@ -1,0 +1,12 @@
+.FormLine__input {
+	margin: 0;
+	padding: 0 0 6.1px 0;
+	outline: none;
+	border: 0;
+	border-bottom: .7px solid #F2F2F2;
+
+	font-family: 'WorkSansRegular';
+	color:#111111;
+	font-size: 14px;
+	line-height: 16px;
+}

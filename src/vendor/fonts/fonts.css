@@ -6,6 +6,13 @@
 }
 
 @font-face {
+	font-family: 'WorkSansRegular';
+	font-style:  normal;
+	font-weight: 400;
+	src: url("./WorkSansRegular.woff") format("woff")
+}
+
+@font-face {
 	font-family: 'WorkSansMedium';
 	font-style:  normal;
 	font-weight: 500;

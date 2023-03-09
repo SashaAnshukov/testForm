@@ -1,35 +1,33 @@
 
 function FormLine ({
-		firstInfoInput, secondInfoInput, 
-		firstValue, firstPlaceholder, firstHandleChange, firstType, firstNameOfInput,
-		secondValue, secondPlaceholder, secondHandleChange, secondType, secondNameOfInput, 
+		firstDescriptionInput, secondDescriptionInput, 
+		fstInputValue, fstInputPlaceholder, fstHandleChange, fstInputType, fstInputName,
+		scndInputValue, scndInputPlaceholder, scndHandleChange, scndInputType, scndInputName, 
 	}) {
     
     return (
 			<div className="FormLine">
-				<div>
-					<p className="FormLine__firstName">{firstInfoInput}</p>
-					<p className="FormLine__secondtName">{secondInfoInput}</p>
-				</div>
-
-				<div>
+				
+				<div className="FormLine__info">
+					<p className="FormLine__descriptionInput">{firstDescriptionInput}</p>
+					<p className="FormLine__descriptionInput">{secondDescriptionInput}</p>
 					<input
-						className="FormLine__firstInput"
-						value={firstValue || ''} 
-						placeholder = {firstPlaceholder}
-						onChange={firstHandleChange}
-						type={firstType} name ={firstNameOfInput}
+						className="FormLine__input"
+						value={fstInputValue || ''} 
+						placeholder = {fstInputPlaceholder}
+						onChange={fstHandleChange}
+						type={fstInputType} name ={fstInputName}
 						required
 					>
 					</input>
-
+					
 					<input 
-						className="FormLine__secondtInput"
-						value={secondValue || ''} 
-						placeholder = {secondPlaceholder}
-						onChange={secondHandleChange}
-						type={secondType} 
-						name ={secondNameOfInput}
+						className="FormLine__input"
+						value={scndInputValue || ''} 
+						placeholder = {scndInputPlaceholder}
+						onChange={scndHandleChange}
+						type={scndInputType} 
+						name ={scndInputName}
 						required
 					>
 					</input>

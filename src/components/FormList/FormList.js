@@ -1,22 +1,43 @@
-import React from 'react';
+import React from 'react'
 import {useState} from 'react';
 import {Link} from 'react-router-dom';
 import FormLine from '../FormLine/FormLine';
+
 
 function Formlist ({mainTitle, title, description, onSubmit, buttonText}) {
     
 	const [firstName, setFirstName] = useState('');
 	const [lastName, setLastName] = useState('');
+	const [nationality, setNationality] = useState('');
+	const [email, setEmail] = useState('');
+	const [date, setDate] = useState(null);
+	const [checkbox, setCheckbox] = useState(false);
+	
+	//const [password, setPassword] = useState('');
 
 	function handleChangeFirstName(e) {
 		setFirstName(e.target.value);
 	}
 	
-	function handleChangeLasttName(e) {
+	function handleChangeLastName(e) {
 		setLastName(e.target.value);
 	}	
 
+	function handleChangeNationality(e) {
+		setNationality(e.target.value);
+	}	
 
+	function handleChangeEmail(e) {
+		setEmail(e.target.value);
+	}	
+
+	function handleChangeDate(e) {
+		setDate(e.target.value)
+	}
+
+	function handleChangeGender(e) {
+	
+	}
 
     return (
 			<div className="FormList">
@@ -30,15 +51,45 @@ function Formlist ({mainTitle, title, description, onSubmit, buttonText}) {
 							
 									<p className="Formlist__description">{description}</p>
 									<FormLine
-										firstInfoInput={'First Name'} secondInfoInput={'Last Name'}
-										firstValue={firstName} firstPlaceholder={'enter a name'}
-										firstHandleChange={handleChangeFirstName} 
-										firstType={'text'} firstNameOfInput={'firstName'}
-										secondValue={lastName} secondPlaceholder={'enter your last name'}
-										secondHandleChange={handleChangeLasttName}
-										secondType={'text'} secondNameOfInput={'lastName'}
+										firstDescriptionInput={'First Name'} secondDescriptionInput={'Last Name'}
+
+										fstInputValue={firstName} fstInputPlaceholder={"Enter a name"}
+										fstHandleChange={handleChangeFirstName} 
+										fstInputType={'text'} fstInputName={'firstName'}
+
+										scndInputValue={lastName} scndInputPlaceholder={'Enter your last name'}
+										scndHandleChange={handleChangeLastName}
+										scndInputType={'text'} scndInputName={'lastName'}
 									>
 									</FormLine>
+									<FormLine
+										firstDescriptionInput={'Nationality'} secondDescriptionInput={'E-mail'}
+
+										fstInputValue={nationality} fstInputPlaceholder={'Enter a nationality'}
+										fstHandleChange={handleChangeNationality} 
+										fstInputType={'text'} fstInputName={'nationality'}
+
+										scndInputValue={email} scndInputPlaceholder={'Enter your e-mail'}
+										scndHandleChange={handleChangeEmail}
+										scndInputType={'text'} scndInputName={'E-mail'}
+									>
+									</FormLine>
+									
+									<FormLine
+										firstDescriptionInput={'Date of Birth'} secondDescriptionInput={'Gender'}
+
+										fstInputValue={<Test />} fstInputPlaceholder={'Enter date of Birth'}
+										fstHandleChange={handleChangeDate} 
+										fstInputType={'all'} fstInputName={'date'}
+										
+										scndInputValue={checkbox &&'Female'} scndInputPlaceholder={'Enter your gender'}
+										scndHandleChange={handleChangeGender}
+										scndInputType={'checkbox'} scndInputName={'checkbox'}
+										
+									>
+										
+									</FormLine>
+									
 									<div className="FormList__auth">
 										<p className="Formlist__authInfo">Have an account? 
 											<Link className="Formlist__authInfoLink" to='/sign-in'>Login</Link>

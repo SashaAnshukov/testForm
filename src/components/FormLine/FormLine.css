@@ -1,3 +1,5 @@
 .FormLine {
-	display: grid;
+	display: flex;
+	flex-direction: row;
+	margin-top: 16px;
 }
