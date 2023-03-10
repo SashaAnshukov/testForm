@@ -2,6 +2,7 @@ import React from 'react'
 import {useState} from 'react';
 import {Link} from 'react-router-dom';
 import FormLine from '../FormLine/FormLine';
+import FormLineDateAndGender from '../FormLineDateAndGender/FormLineDateAndGender'
 
 
 function Formlist ({mainTitle, title, description, onSubmit, buttonText}) {
@@ -10,7 +11,7 @@ function Formlist ({mainTitle, title, description, onSubmit, buttonText}) {
 	const [lastName, setLastName] = useState('');
 	const [nationality, setNationality] = useState('');
 	const [email, setEmail] = useState('');
-	const [date, setDate] = useState(null);
+	
 	const [checkbox, setCheckbox] = useState(false);
 	
 	//const [password, setPassword] = useState('');
@@ -28,12 +29,11 @@ function Formlist ({mainTitle, title, description, onSubmit, buttonText}) {
 	}	
 
 	function handleChangeEmail(e) {
+		setDay(e.target.value)
 		setEmail(e.target.value);
 	}	
 
-	function handleChangeDate(e) {
-		setDate(e.target.value)
-	}
+	
 
 	function handleChangeGender(e) {
 	
@@ -75,20 +75,11 @@ function Formlist ({mainTitle, title, description, onSubmit, buttonText}) {
 									>
 									</FormLine>
 									
-									<FormLine
-										firstDescriptionInput={'Date of Birth'} secondDescriptionInput={'Gender'}
-
-										fstInputValue={<Test />} fstInputPlaceholder={'Enter date of Birth'}
-										fstHandleChange={handleChangeDate} 
-										fstInputType={'all'} fstInputName={'date'}
-										
-										scndInputValue={checkbox &&'Female'} scndInputPlaceholder={'Enter your gender'}
-										scndHandleChange={handleChangeGender}
-										scndInputType={'checkbox'} scndInputName={'checkbox'}
-										
+									<FormLineDateAndGender
+										firstDescriptionInput={'Date of Birth'} secondDescriptionInput={'Gender'}	
 									>
 										
-									</FormLine>
+									</FormLineDateAndGender>
 									
 									<div className="FormList__auth">
 										<p className="Formlist__authInfo">Have an account? 

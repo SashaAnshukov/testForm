@@ -1,0 +1,16 @@
+.FormLine__date {
+	padding: 0 0 6.1px 0;
+	outline: none;
+	border: 0;
+	
+	
+
+	font-family: 'WorkSansRegular';
+	color:#111111;
+	font-size: 14px;
+	line-height: 16px;
+
+	-webkit-appearance: none;
+	appearance: none;
+	background: url("../../../images/down-arrow.svg") no-repeat right;
+}
