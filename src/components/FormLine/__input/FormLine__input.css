@@ -4,6 +4,7 @@
 	outline: none;
 	border: 0;
 	border-bottom: .7px solid #F2F2F2;
+	background-color: transparent; /*прозрачный цвет фона для input*/
 
 	font-family: 'WorkSansRegular';
 	color:#111111;

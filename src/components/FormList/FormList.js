@@ -11,10 +11,10 @@ function Formlist ({mainTitle, title, description, onSubmit, buttonText}) {
 	const [lastName, setLastName] = useState('');
 	const [nationality, setNationality] = useState('');
 	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+	const [cofirmPassword, setCofirmPassword] = useState('');
 	
-	const [checkbox, setCheckbox] = useState(false);
 	
-	//const [password, setPassword] = useState('');
 
 	function handleChangeFirstName(e) {
 		setFirstName(e.target.value);
@@ -29,15 +29,17 @@ function Formlist ({mainTitle, title, description, onSubmit, buttonText}) {
 	}	
 
 	function handleChangeEmail(e) {
-		setDay(e.target.value)
 		setEmail(e.target.value);
 	}	
 
-	
+	function handleChangePassword(e) {
+		setPassword(e.target.value);
+	}	
 
-	function handleChangeGender(e) {
-	
-	}
+	function handleChangeConfirmPassword(e) {
+		setCofirmPassword(e.target.value);
+	}	
+
 
     return (
 			<div className="FormList">
@@ -78,8 +80,20 @@ function Formlist ({mainTitle, title, description, onSubmit, buttonText}) {
 									<FormLineDateAndGender
 										firstDescriptionInput={'Date of Birth'} secondDescriptionInput={'Gender'}	
 									>
-										
 									</FormLineDateAndGender>
+
+									<FormLine
+										firstDescriptionInput={'Password'} secondDescriptionInput={'Confirm Password'}
+
+										fstInputValue={password} fstInputPlaceholder={'Enter your password'}
+										fstHandleChange={handleChangePassword} 
+										fstInputType={'password'} fstInputName={'password'}
+
+										scndInputValue={cofirmPassword} scndInputPlaceholder={'Cofirm password'}
+										scndHandleChange={handleChangeConfirmPassword}
+										scndInputType={'password'} scndInputName={'cofirm password'}
+									>
+									</FormLine>
 									
 									<div className="FormList__auth">
 										<p className="Formlist__authInfo">Have an account? 

@@ -1,0 +1,21 @@
+.FormLine__input-radio {
+	-webkit-appearance: none;
+  -moz-appearance: none;
+	appearance: none;
+	width: 12px;
+	height: 12px;
+	border: .7px solid #5A61ED;
+	border-radius: 6.3px;
+	background-clip: content-box;
+	padding: 2px;
+	margin-top: 2.4px;
+	margin-right: 6px;
+}
+
+.FormLine__input-radio:last-of-type{
+	margin-left: 19px;
+}
+
+.FormLine__input-radio:checked {
+  background-color: #5A61ED;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import range from 'lodash.range';
+import Radioinput from '../RadioInput/Radioinput';
 
 function FormLineDateAndGender ({firstDescriptionInput, secondDescriptionInput}) {
 
@@ -43,25 +44,43 @@ function FormLineDateAndGender ({firstDescriptionInput, secondDescriptionInput})
 					<p className="FormLine__descriptionInput">{secondDescriptionInput}</p>
 					<div className="FormLine__dateOfBirth">
 						
-							<select className="FormLine__date FormLine__date_days" name="days" value={day} onChange={handleChangeDays}>
-								{range(1, 32).map(item => {
-										return (<option key={item} value={item}>{item}</option>);
-								})}
-							</select>
-						
-						<select className="FormLine__date FormLine__date_months" name="months" value={month} onChange={handleChangeMonths}>
+						<select 
+							className="FormLine__date FormLine__date_days"
+							name="days" 
+							value={day} 
+							onChange={handleChangeDays}
+						>
+							{range(1, 32).map(item => {
+									return (<option key={item} value={item}>{item}</option>);
+							})}
+						</select>
+					
+						<select 
+						className="FormLine__date FormLine__date_months"
+						name="months"
+						value={month}
+						onChange={handleChangeMonths}
+						>
 							{months.map(item => {
 								return (<option key={item.value} value={item.value}>{item.text}</option>);
 							})}
-							</select>
+						</select>
 
-							<select className="FormLine__date FormLine__date_years" name="years" value={year} onChange={handleChangeYears}>
+						<select 
+							className="FormLine__date FormLine__date_years"
+							name="years"
+							value={year}
+							onChange={handleChangeYears}
+						>
 							{range(1950, 2023).map(item => {
 									return (<option key={item} value={item}>{item}</option>);
 							})}
 						</select>
 						
 					</div>
+					
+					<Radioinput />
+
 				</div>
 			</div>
     )
