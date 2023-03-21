@@ -1,0 +1,4 @@
+.Formline__input_error {
+	border-bottom: 2px solid #FF2828;
+	/*transform: matrix(1, 0, 0, -1, 0, 0);*/
+}

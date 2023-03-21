@@ -1,8 +1,7 @@
-.Formlist__description {
-	margin: 0 0 20px 0;
-
+.Formlist__description_registered {
+	margin: 11px 0 0 43px; 
 	font-family: 'WorkSansLight';
-	color:#111111;
+	
 	font-size: 14px;
 	line-height: 16px;
 }

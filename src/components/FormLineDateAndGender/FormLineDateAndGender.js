@@ -2,39 +2,28 @@ import React from 'react';
 import {useState} from 'react';
 import range from 'lodash.range';
 import Radioinput from '../RadioInput/Radioinput';
+import DropDownList from '../DropDownList/DropDownList';
 
-function FormLineDateAndGender ({firstDescriptionInput, secondDescriptionInput}) {
+function FormLineDateAndGender ({
+		day, month, year,
+		handleChangeDays, handleChangeMonths, handleChangeYears,
+		firstDescriptionInput, secondDescriptionInput, gender, handleChangeGender
+	}) {
 
-	const [day, setDay] = useState('');
-	const [month, setMonth] = useState('');
-	const [year, setYear] = useState('');
-
-	const months = [
-    {value:'01', text:'January'},
-    {value:'02', text:'February'},
-		{value:'03', text:'March'},
-		{value:'04', text:'April'},
-		{value:'05', text:'May'},
-		{value:'06', text:'June'},
-		{value:'07', text:'July'},
-		{value:'08', text:'August'},
-		{value:'09', text:'September'},
-		{value:'10', text:'October'},
-		{value:'11', text:'November'},
-		{value:'12', text:'December'}
-	];
-
-	function handleChangeDays(e) {
-		setDay(e.target.value)
-	}
-
-	function handleChangeMonths(e) {
-		setMonth(e.target.value)
-	}
-
-	function handleChangeYears(e) {
-		setYear(e.target.value)
-	}
+		const months = [
+			{value:'January', text:'January'},
+			{value:'February', text:'February'},
+			{value:'March', text:'March'},
+			{value:'April', text:'April'},
+			{value:'May', text:'May'},
+			{value:'June', text:'June'},
+			{value:'July', text:'July'},
+			{value:'August', text:'August'},
+			{value:'September', text:'September'},
+			{value:'October', text:'October'},
+			{value:'November', text:'November'},
+			{value:'December', text:'December'}
+		];
 
     return (
 			<div className="FormLine">
@@ -44,42 +33,42 @@ function FormLineDateAndGender ({firstDescriptionInput, secondDescriptionInput})
 					<p className="FormLine__descriptionInput">{secondDescriptionInput}</p>
 					<div className="FormLine__dateOfBirth">
 						
-						<select 
-							className="FormLine__date FormLine__date_days"
-							name="days" 
+						<DropDownList 
+							className={"FormLine__date FormLine__date_days"}
+							name={"days"} 
 							value={day} 
-							onChange={handleChangeDays}
+							handleChange={handleChangeDays}
 						>
 							{range(1, 32).map(item => {
-									return (<option key={item} value={item}>{item}</option>);
+								return (<option key={item} value={item}>{item}</option>);
 							})}
-						</select>
+						</DropDownList>
 					
-						<select 
-						className="FormLine__date FormLine__date_months"
-						name="months"
-						value={month}
-						onChange={handleChangeMonths}
-						>
-							{months.map(item => {
-								return (<option key={item.value} value={item.value}>{item.text}</option>);
-							})}
-						</select>
+						<DropDownList
+							className={"FormLine__date FormLine__date_months"}
+							nameSelect={"months"}
+							value={month}
+							handleChange={handleChangeMonths}
+							>
+								{months.map(item => {
+									return (<option key={item.value} value={item.value}>{item.text}</option>);
+								})}
+						</DropDownList>
 
-						<select 
-							className="FormLine__date FormLine__date_years"
-							name="years"
+						<DropDownList
+							className={"FormLine__date FormLine__date_years"}
+							name={"years"}
 							value={year}
-							onChange={handleChangeYears}
+							handleChange={handleChangeYears}
 						>
 							{range(1950, 2023).map(item => {
-									return (<option key={item} value={item}>{item}</option>);
+								return (<option key={item} value={item}>{item}</option>);
 							})}
-						</select>
+						</DropDownList>
 						
 					</div>
 					
-					<Radioinput />
+					<Radioinput handleChangeGender={handleChangeGender} gender={gender}/>
 
 				</div>
 			</div>

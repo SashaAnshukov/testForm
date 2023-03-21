@@ -4,10 +4,18 @@
 	outline: none;
 	border: 0;
 	border-bottom: .7px solid #F2F2F2;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 	background-color: transparent; /*прозрачный цвет фона для input*/
 
 	font-family: 'WorkSansRegular';
 	color:#111111;
 	font-size: 14px;
 	line-height: 16px;
+}
+
+input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
 }

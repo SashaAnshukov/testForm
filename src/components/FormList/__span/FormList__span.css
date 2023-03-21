@@ -1,0 +1,9 @@
+.FormList__span {
+	min-height: 16px;
+	margin: 0;
+
+	font-family: 'WorkSansLight';
+	color: #db1919;
+	font-size: 12px;
+	line-height: 14px;
+}

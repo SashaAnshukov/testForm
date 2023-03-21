@@ -1,0 +1,16 @@
+.FormLine__nationality {
+	margin: 0;
+	padding: 0 0 6.1px 0;
+	outline: none;
+	border: 0;
+	border-bottom: 0.7px solid #F2F2F2;
+
+	font-family: 'WorkSansRegular';
+	color:#111111;
+	font-size: 14px;
+	line-height: 16px;
+
+	-webkit-appearance: none; /*Скрытие стандартной стрелки выбора select*/ 
+	appearance: none; /*Скрытие стандартной стрелки выбора select*/ 
+	background: url("../../../images/down-arrow.svg") no-repeat right; /*замена стандартной стрелки выбора select*/
+}
